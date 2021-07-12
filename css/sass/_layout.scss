@@ -20,6 +20,16 @@
 
 // CONTAINER
 
+.flex-end{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.relative{
+    position: relative;
+}
+
 .container{
     max-width: 1220px;
 
@@ -63,5 +73,131 @@
 
     img{
         max-width: 400px;
+    }
+}
+
+
+.bg-hero{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    border: 0px solid green;
+
+    overflow: hidden;
+    z-index: -1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1200px){
+    .svg-hero{
+        transform: scale(1.5) rotate(25deg);
+    }
+}
+@media screen and (max-width: 960px){
+    .svg-hero{
+        transform: scale(2) rotate(25deg);
+    }
+}
+
+// SELECTED WORKS
+
+.bb-gray{
+    width: 100%;
+    border-bottom: 1px solid $black-light;
+}
+
+.list-item{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+
+    position: relative;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    a{
+        &:hover{
+            & + .img-project{
+                transform: translate(-50%, -50%) translate3d(0,0,0);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.img-project{
+    max-width: 720px;
+    border-radius: 4px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transition: .5s ease;
+    z-index: -1;
+
+    opacity: 0;
+
+    transform: translate(-50%, -50%) translate3d(-1000px,0,0) skewX(30deg);
+
+}
+
+.get{
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 16px 24px;
+}
+
+// ANIMATIONS
+
+#bg-heroline1{
+    //stroke-dasharray: 100 100 !important;
+    animation: linha1 4s linear infinite alternate;
+}
+
+#bg-heroline2{
+    //stroke-dasharray: 50 100 !important;
+   // animation: linha2 1s ease infinite alternate;
+}
+
+#bg-heroline3{
+    //stroke-dasharray: 10 100 !important;
+    //animation: linha3 2s ease infinite alternate;
+}
+
+@keyframes linha1{
+    0%{
+        stroke-dasharray: 0 100;
+    }
+    100%{
+        stroke-dasharray: 1000 0;
+    }
+}
+
+@keyframes linha2{
+    0%{
+        stroke-dasharray: 0 100;
+    }
+    100%{
+        stroke-dasharray: 100 0;
+    }
+}
+
+@keyframes linha3{
+    0%{
+        stroke-dasharray: 0 100;
+    }
+    100%{
+        stroke-dasharray: 100 0;
     }
 }

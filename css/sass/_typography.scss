@@ -12,6 +12,8 @@ a{
     padding: 8px 24px;
     font-size: 24px;
 
+    display: inline-block;
+
     transition: .5s ease;
 
     position: relative;
@@ -63,7 +65,7 @@ h2{
 }
 
 h3{
-    font-size: 40px;
+    font-size: 48px;
     line-height: 110%;
 }
 
@@ -88,8 +90,8 @@ h6{
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
 }
+
 
 .text-center{
     text-align: center;
@@ -120,10 +122,10 @@ h6{
 
         z-index: -1;
 
-        width: 120px;
-        height: 120px;
+        width: 96px;
+        height: 96px;
 
-        transform: translate(-5%, -22%) rotate(45deg);
+        transform: translate(5%, -15%) rotate(60deg);
 
         background: linear-gradient(225deg, #2DC7ED 0%, rgba(83, 139, 240, 0) 100%);
 
@@ -134,7 +136,7 @@ h6{
 
     &:hover{
         &::after{
-            transform: translate(-5%, -22%) rotate(60deg);
+            transform: translate(5%, -15%) rotate(225deg);
     
         }
     
